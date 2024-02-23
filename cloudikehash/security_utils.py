@@ -12,11 +12,11 @@ class Hasher:
         use_sha256 (bool): Determines whether to use SHA-256 (True) or MD5 (False) as the default hashing algorithm.
     """
 
-    def __init__(self, use_sha256=True):
+    def __init__(self, use_sha512=True):
         """
         Initializes the hasher with the specified algorithm.
         """
-        self.algorithm = hashlib.sha256 if use_sha256 else hashlib.md5
+        self.algorithm = hashlib.sha512 if use_sha512 else hashlib.md5
 
     def get_hash(self, data, force_sha1=False):
         """
